@@ -1,2 +1,2 @@
-# diffusionposer.github.io
-Github.io page for Diffusion Inertial Poser project
+# drop
+GitHub.io page for project DROP
