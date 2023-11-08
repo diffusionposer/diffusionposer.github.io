@@ -49,10 +49,10 @@
 <!--                type="video/mp4">-->
 <!--      </video>-->
 
-      <img id="teaser" src="./static/images/teaser.png"
+      <img id="teaser" src="./static/images/differentConfig.png"
        alt="Teaser figure."/>
       <h2 class="subtitle has-text-centered">
-        DROP, a plug-in human simulator that adds dynamics capability to a pre-trained kinematics generative models, synthesizes dynamic reaction and recovery motion in response to a variety of perturbations.
+        Reconstructions of the same sequence with 6, 4, 3 and 2 IMU sensors.
       </h2>
     </div>
   </div>
@@ -126,28 +126,16 @@
         <div class="content has-text-justified">
 
           <p>
-          Synthesizing realistic human movements, dynamically responsive to the environment,
-            is a long-standing objective in character animation, with applications in
-            computer vision, sports, and healthcare, for motion prediction and data augmentation.
+
           </p>
           <p>
-            Recent kinematics-based generative motion models offer impressive scalability in modeling
-            extensive motion data, albeit without an interface to reason about and interact with physics.
-            While simulator-in-the-loop learning approaches enable highly physically realistic behaviors,
-            the challenges in training often affect scalability and adoption.
+
           </p>
           <p>
-            We introduce DROP, a novel framework for modeling Dynamics Responses of humans
-            using generative mOtion prior and Projective dynamics. DROP can be viewed as a highly stable,
-            minimalist physics-based human simulator that interfaces with a kinematics-based generative motion prior.
-            Utilizing projective dynamics, DROP allows flexible and simple integration of the learned motion prior
-            as one of the projective energies, seamlessly incorporating control provided by the motion prior
-            with Newtonian dynamics. Serving as a model-agnostic plug-in, DROP enables us to fully leverage
-            recent advances in generative motion models for physics-based motion synthesis.
+           
           </p>
           <p>
-            We conduct extensive evaluations of our model across different motion tasks and various physical
-            perturbations, demonstrating the scalability and diversity of responses.
+
           </p>
 
         </div>
@@ -170,229 +158,8 @@
 </section>
 
 
-<section class="section">
-  <div class="container is-max-desktop">
-
-    <h2 class="title is-3">Diverse Physical Scenarios</h2>
-    <div class="content has-text-justified">
-      <p>
-        Generative motion models are trained on motions collected in empty MoCap rooms without physical interactions.
-      </p>
-      <p>
-        With DROP, we can guide a non-physical generative motion model to synthesize realistic
-        human motions in a variety of physical scenarios, without needing retraining or high-level controller.
-      </p>
-      <p>
-        Inherited from the motion prior, we can synthesize diverse motions even in the same physical scenario.
-      </p>
-    </div>
-
-    <div class="columns is-centered">
-
-      <!-- Tripped by obstacles. -->
-      <div class="column">
-        <div class="content">
-          <h3 class="title is-3">Tripped by obstacles</h3>
-          <video id="tripped" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/obstacles.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Tripped by obstacles. -->
-
-      <!-- Moving Platform. -->
-      <div class="column">
-        <div class="content">
-          <h3 class="title is-3">Tilting platform</h3>
-          <video id="tilt" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/platform.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Moving Platform. -->
-
-    </div>
 
 
-    <div class="columns is-centered">
-
-      <!-- Dragged by hand. -->
-      <div class="column">
-        <div class="content">
-          <h3 class="title is-3">Dragged by hand</h3>
-          <video id="drag" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/drag_hand.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Dragged by hand. -->
-
-      <!-- Projectiles. -->
-      <div class="column">
-        <div class="content">
-          <h3 class="title is-3">Balls thrown at</h3>
-          <video id="balls" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/projectiles.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ Projectiles. -->
-
-    </div>
-
-
-    <div class="columns is-centered">
-
-      <!-- stiff knee. -->
-      <div class="column">
-        <div class="content">
-          <h3 class="title is-3">Walking with a stiff knee</h3>
-          <video id="stiff" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/stiff-knee-2.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ stiff knee. -->
-
-      <!-- back flip -->
-      <div class="column">
-        <div class="content">
-          <h3 class="title is-3">Pushed during back flip</h3>
-          <video id="flip" autoplay controls muted loop playsinline height="100%">
-            <source src="./static/videos/backflip.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-      </div>
-      <!--/ back flip. -->
-
-    </div>
-
-
-    <!-- two char. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Two-character Interaction</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            DROP also allows us to make two generative models to physically interact with each other,
-            treating the other model (human character) as external physics.
-          </p>
-        </div>
-
-        <div class="content has-text-centered">
-          <video id="two-char"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/2-char.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-
-      </div>
-    </div>
-    <!--/ two char. -->
-
-    <!-- compare. -->
-    <div class="columns is-centered">
-      <div class="column is-full-width">
-        <h2 class="title is-3">Comparison to DRL-based Methods</h2>
-
-        <div class="content has-text-justified">
-          <p>
-            As our method is built upon a generative model trained on large-scale human motion data, compared to DRL-based methods, we can generate diverse and compliant physical responses.
-          </p>
-        </div>
-
-        <!-- small. -->
-        <h3 class="title is-4">Responses to small external forces</h3>
-
-        <div class="content has-text-centered">
-          <video id="small"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/small-compare.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ small. -->
-
-
-        <!-- large. -->
-        <h3 class="title is-4">Responses to large external forces</h3>
-
-        <div class="content has-text-centered">
-          <video id="large"
-                 controls
-                 muted
-                 preload
-                 playsinline
-                 width="75%">
-            <source src="./static/videos/large-compare.mp4"
-                    type="video/mp4">
-          </video>
-        </div>
-        <!--/ large. -->
-
-      </div>
-    </div>
-    <!--/ compare. -->
-
-
-<!--    &lt;!&ndash; Concurrent Work. &ndash;&gt;-->
-<!--    <div class="columns is-centered">-->
-<!--      <div class="column is-full-width">-->
-<!--        <h2 class="title is-3">Related Links</h2>-->
-
-<!--        <div class="content has-text-justified">-->
-<!--          <p>-->
-<!--            There's a lot of excellent work that was introduced around the same time as ours.-->
-<!--          </p>-->
-<!--          <p>-->
-<!--            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.-->
-<!--          </p>-->
-<!--          <p>-->
-<!--            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>-->
-<!--            both use deformation fields to model non-rigid scenes.-->
-<!--          </p>-->
-<!--          <p>-->
-<!--            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>-->
-<!--          </p>-->
-<!--          <p>-->
-<!--            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.-->
-<!--          </p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    &lt;!&ndash;/ Concurrent Work. &ndash;&gt;-->
-
-  </div>
-</section>
-
-
-<section class="section" id="BibTeX">
-  <div class="container is-max-desktop content">
-    <h2 class="title">BibTeX</h2>
-    <pre><code>@article{jiang2023drop,
-  author    = {Jiang, Yifeng and Won, Jungdam and Ye, Yuting and Liu, C Karen},
-  title     = {DROP: Dynamics Responses from Human Motion Prior and Projective Dynamics},
-  journal   = {SIGGRAPH Asia},
-  year      = {2023},
-}</code></pre>
-  </div>
-</section>
 
 
 <footer class="footer">
