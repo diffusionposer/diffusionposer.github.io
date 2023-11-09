@@ -163,25 +163,14 @@
 <section class="section">
   <div class="container is-max-desktop">
 
-    <h2 class="title is-3">Diverse Physical Scenarios</h2>
-    <div class="content has-text-justified">
-      <p>
-        Generative motion models are trained on motions collected in empty MoCap rooms without physical interactions.
-      </p>
-      <p>
-        With DROP, we can guide a non-physical generative motion model to synthesize realistic
-        human motions in a variety of physical scenarios, without needing retraining or high-level controller.
-      </p>
-      <p>
-        Inherited from the motion prior, we can synthesize diverse motions even in the same physical scenario.
-      </p>
-    </div>
 
 
     <!-- two char. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Reconstructions using Diffusion Inertial Poser with different sensor configurations</h2>
+		
+		<h2 class="title is-3">SEQUENCE 1</h2>
 
         <div class="content has-text-justified">
           <p>
@@ -217,6 +206,48 @@
                  playsinline
                  width="75%">
             <source src="./static/videos/differentConfig.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+		
+		
+		<h2 class="title is-3">SEQUENCE 2</h2>
+
+        <div class="content has-text-justified">
+          <p>
+				Qualitative comparison of Diffusion Inertial Poser to PIP [Yi et al.].
+          </p>
+        </div>
+
+        <div class="content has-text-centered">
+          <video id="two-char"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/oursVSPIP_2.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+			
+		
+		<div class="content has-text-justified">
+          <p>
+				Our generative model allows reconstructing the same sequence with different sensor configurations.
+				Here we show results for selected configurations using four, three and two sensors. 
+				Note that we chose different configurations here.
+          </p>
+        </div>
+
+        <div class="content has-text-centered">
+          <video id="two-char"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/differentConfig_v2.mp4"
                     type="video/mp4">
           </video>
         </div>
