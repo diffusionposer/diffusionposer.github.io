@@ -160,6 +160,105 @@
 
 
 
+<section class="section">
+  <div class="container is-max-desktop">
+
+    <h2 class="title is-3">Diverse Physical Scenarios</h2>
+    <div class="content has-text-justified">
+      <p>
+        Generative motion models are trained on motions collected in empty MoCap rooms without physical interactions.
+      </p>
+      <p>
+        With DROP, we can guide a non-physical generative motion model to synthesize realistic
+        human motions in a variety of physical scenarios, without needing retraining or high-level controller.
+      </p>
+      <p>
+        Inherited from the motion prior, we can synthesize diverse motions even in the same physical scenario.
+      </p>
+    </div>
+
+
+    <!-- two char. -->
+    <div class="columns is-centered">
+      <div class="column is-full-width">
+        <h2 class="title is-3">Reconstructions using Diffusion Inertial Poser with different sensor configurations</h2>
+
+        <div class="content has-text-justified">
+          <p>
+				Qualitative comparison of Diffusion Inertial Poser to PIP [Yi et al.].
+          </p>
+        </div>
+
+        <div class="content has-text-centered">
+          <video id="two-char"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/oursVSPIP_1.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+			
+		
+		<div class="content has-text-justified">
+          <p>
+				Our generative model allows reconstructing the same sequence with different sensor configurations.
+				Here we show results for selected configurations using four, three and two sensors.
+          </p>
+        </div>
+
+        <div class="content has-text-centered">
+          <video id="two-char"
+                 controls
+                 muted
+                 preload
+                 playsinline
+                 width="75%">
+            <source src="./static/videos/differentConfig.mp4"
+                    type="video/mp4">
+          </video>
+        </div>
+
+      </div>
+    </div>
+    <!--/ two char. -->
+
+    
+
+
+<!--    &lt;!&ndash; Concurrent Work. &ndash;&gt;-->
+<!--    <div class="columns is-centered">-->
+<!--      <div class="column is-full-width">-->
+<!--        <h2 class="title is-3">Related Links</h2>-->
+
+<!--        <div class="content has-text-justified">-->
+<!--          <p>-->
+<!--            There's a lot of excellent work that was introduced around the same time as ours.-->
+<!--          </p>-->
+<!--          <p>-->
+<!--            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.-->
+<!--          </p>-->
+<!--          <p>-->
+<!--            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>-->
+<!--            both use deformation fields to model non-rigid scenes.-->
+<!--          </p>-->
+<!--          <p>-->
+<!--            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>-->
+<!--          </p>-->
+<!--          <p>-->
+<!--            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.-->
+<!--          </p>-->
+<!--        </div>-->
+<!--      </div>-->
+<!--    </div>-->
+<!--    &lt;!&ndash;/ Concurrent Work. &ndash;&gt;-->
+
+  </div>
+</section>
+
+
 
 
 <footer class="footer">
