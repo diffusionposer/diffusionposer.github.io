@@ -52,7 +52,7 @@
       <img id="teaser" src="./static/images/differentConfig_v2.jpg"
        alt="Teaser figure."/>
       <h2 class="subtitle has-text-centered">
-        Reconstructions of the same sequence with PIP [Yi et al.] using 6 sensors and OURS using 6, 4, 3 and 2 IMU sensors. 
+        Reconstructions of the same sequence with PIP <a href="https://xinyu-yi.github.io/PIP/">[Yi et al. 2022]</a>  using 6 sensors and OURS using 6, 4, 3 and 2 IMU sensors. 
       </h2>
     </div>
   </div>
@@ -157,7 +157,7 @@
     <!--/ Paper video. -->
 	
 	
-		 <!-- Paper video. -->
+	 <!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Live Demo: Diverse motion and locomotion with five IMU sensors</h2>
@@ -172,7 +172,25 @@
 	<!-- Paper video. -->
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
-        <h2 class="title is-3">Live Demo: Clinically relevant gait deviations captured with 3 sensors (foot L/R and head)</h2>
+        <h2 class="title is-3">Live Demo: Clinically relevant gait deviations captured with 4 sensors (foot L/R and head)</h2>
+		
+		 <div class="content has-text-justified">
+          <p>
+				Clinical studies that aim to monitor patients and track rehabilation would benefit from continuous gait analysis during daily life. 
+				Here we show that 4 sensors suffice to capture some typical gait deviations in different patient populations
+          </p>
+		  <p>
+				Toe-in and toe-out gait are two gait deviations that can reduce knee load in patients with knee pain (e.g. knee osteoarthritis patients).  <a href="https://pubmed.ncbi.nlm.nih.gov/29174534/">[Uhlrich et al. 2018]</a> 
+          </p>
+		  <p>
+				Scissor gait is a gait deviation/compensation observed in patients with hip adductor spasticity (e.g. cerebral palsy patients).
+          </p>
+		  <p>
+				Patients with a weak hip flexor on one side compensate by exorotating the hip joint to shift the workload to the hip adductor. A weak hip flexor on one side is observed in patients with nerve damage or hip osteoarthritis patients.
+          </p>
+        </div>
+		
+		
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/-cBe_UY8YsM?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -185,6 +203,15 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Live Demo: Tennis</h2>
+		
+				 <div class="content has-text-justified">
+          <p>
+				All reconstructions are made with our online algorithm.
+          </p>
+        </div>
+		
+		
+		
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/5RET1JJl3Z0?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -207,6 +234,13 @@
     <div class="columns is-centered">
       <div class="column is-full-width">
         <h2 class="title is-3">Reconstructions using Diffusion Inertial Poser with different sensor configurations</h2>
+		
+		 <div class="content has-text-justified">
+          <p>
+				All reconstructions are made with our online algorithm.
+          </p>
+        </div>
+		
 		
 		<h2 class="title is-3">SEQUENCE 1</h2>
 
@@ -339,8 +373,14 @@
     <!-- two char. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Our generative model can complete motion realistically if signals from sensors become unreliable or are lost. As soon as signals are back a natural transition is performed to match the underlying motion.</h2>
-	
+        <h2 class="title is-3">Signal drop is completed by our generative model. </h2>
+		
+	    <div class="content has-text-justified">
+          <p>
+			Our generative model can complete motion realistically if signals from sensors become unreliable or are lost. (f.e. lost connection or package losses).
+			As soon as signals are back a natural transition is performed to match the underlying motion. Regressive models such as PIP do not have this capacity.
+          </p>
+        </div>
 		<div class="content has-text-centered">
 			<video id="two-char"
                  controls
