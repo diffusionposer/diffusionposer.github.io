@@ -34,7 +34,7 @@
     <div class="container is-max-desktop">
       <div class="columns is-centered">
         <div class="column has-text-centered">
-          <h1 class="title is-1 publication-title">DiffusionPoser: An autoregressive diffusion model for real-time human motion reconstruction from arbitrary sparse sensor configurations</h1>
+          <h1 class="title is-1 publication-title">DiffusionPoser: Real-time Human Motion Reconstruction From Arbitrary Sparse Sensors Using Autoregressive Diffusion</h1>
         </div>
       </div>
     </div>
@@ -58,63 +58,6 @@
   </div>
 </section>
 
-
-<!--<section class="hero is-light is-small">-->
-<!--  <div class="hero-body">-->
-<!--    <div class="container">-->
-<!--      <div id="results-carousel" class="carousel results-carousel">-->
-<!--        <div class="item item-steve">-->
-<!--          <video poster="" id="steve" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/steve.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-chair-tp">-->
-<!--          <video poster="" id="chair-tp" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/chair-tp.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-shiba">-->
-<!--          <video poster="" id="shiba" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/shiba.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-fullbody">-->
-<!--          <video poster="" id="fullbody" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/fullbody.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-blueshirt">-->
-<!--          <video poster="" id="blueshirt" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/blueshirt.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-mask">-->
-<!--          <video poster="" id="mask" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/mask.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-coffee">-->
-<!--          <video poster="" id="coffee" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/coffee.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--        <div class="item item-toby">-->
-<!--          <video poster="" id="toby" autoplay controls muted loop playsinline height="100%">-->
-<!--            <source src="./static/videos/toby2.mp4"-->
-<!--                    type="video/mp4">-->
-<!--          </video>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--  </div>-->
-<!--</section>-->
 
 
 <section class="section">
@@ -149,6 +92,15 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Live Demo: Diverse motion and locomotion with six IMU sensors</h2>
+		<div class="content has-text-justified">
+          <p>
+				We construct diverse motion while instrumenting the pelvis, head, wrists and shanks. 
+				This is the configuration that has been used in a series of prior work (<a href="https://xinyu-yi.github.io/TransPose/">[Yi et al. 2021]</a>, <a href="https://xinyu-yi.github.io/PIP/">[Yi et al. 2022]</a>,<a href="https://github.com/jyf588/transformer-inertial-poser">[Jiang et al. 2022]</a>) . 
+				In our paper we show quantitatively that our reconstructions are as good as previous systems for this specific configuration.
+				For this video we replace our stick-figure reconstruction with a SMPL mesh  and remove the delay, in order to appreciate details better. The reconstruction is still done with the live algorithm - but just after data collection. 
+				In the following videos we show the reconstruction on the monitor and real motion together. 
+          </p>
+        </div>
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/AP_UTbtnFlc?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -168,7 +120,9 @@
         <h2 class="title is-3">Live Demo: Diverse motion and locomotion with five IMU sensors</h2>
 		<div class="content has-text-justified">
           <p>
-				Here we reconstruct motion while instrumenting the pelvis, left wrist, right thigh and the feet. This mimics a realistic real-life setup with instrumented belt and shoes, a watch, a smartphone.
+				We remove an IMU and slightly change the configuration that now consists of five IMUs attached to the feet, pelvis, left wrist and right thigh. 
+				Such configuration matches convenient locations to attach devices for daily life activity monitoring (shoes, belt, watch, smartphone).
+				We reconstruct a similar set of diverse motions. Note that uninstrumented segments are reconstructed realistically (f.e. right arm swing during walking) but that specific motions might not be captured.
           </p>
         </div>
         <div class="publication-video">
@@ -185,7 +139,8 @@
         <h2 class="title is-3">Live Demo: Diverse motion and locomotion with four IMU sensors</h2>
 		<div class="content has-text-justified">
           <p>
-				Here we reconstruct motion while instrumenting the left wrist, right thigh and the feet. This mimics a realistic real-life setup with instrumented shoes, a watch and a smartphone.
+				We remove another sensor and now instrument the left wrist, right thigh and the feet and reconstruct a similar sequence of diverse motions. 
+				This configuration mimics a realistic real-life setup with instrumented shoes, a watch and a smartphone.
           </p>
         </div>
         <div class="publication-video">
@@ -202,6 +157,9 @@
     <div class="columns is-centered has-text-centered">
       <div class="column is-four-fifths">
         <h2 class="title is-3">Live Demo: Diverse motion and locomotion with six IMU sensors, but with live visualization.</h2>
+		          <p>
+				This is a repeat of the first video, but with the live reconstruction on the monitor and human motion captured together. 
+          </p>
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/FAxBZNTzfbs?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -218,6 +176,7 @@
 		
 		 <div class="content has-text-justified">
           <p>
+				We remove more sensors and now have a setup with 3 IMUs. Such setups are useful for monitoring over long periods of time.
 				Clinical studies that aim to monitor patients and track rehabilation would benefit from continuous gait analysis during daily life. 
 				Here we show that 3 sensors suffice to capture some typical gait deviations in different patient populations
           </p>
@@ -248,12 +207,9 @@
 		
 				 <div class="content has-text-justified">
           <p>
-				All reconstructions are made with our online algorithm.
+				Finally we go back to our setup with six sensors and reconstruct dynamic motion outdoors. We record a tennis player, who is playing against the wall. 
           </p>
         </div>
-		
-		
-		
         <div class="publication-video">
           <iframe src="https://www.youtube.com/embed/5RET1JJl3Z0?rel=0&amp;showinfo=0"
                   frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
@@ -275,11 +231,12 @@
     <!-- two char. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Reconstructions using   DiffusionPoser with different sensor configurations</h2>
+        <h2 class="title is-3">Reconstructions using DiffusionPoser with different sensor configurations</h2>
 		
 		 <div class="content has-text-justified">
           <p>
-				All reconstructions are made with our online algorithm.
+				Here we show more reconstructions of the same motion with sensor configurations. We also compare to PIP, one of the state-of-the-art systems that reconstructs from a specific six sensor configuration.
+				The input data is real IMU data from the TotalCapture dataset. The ground truth is reconstructed from marker data. 
           </p>
         </div>
 		
@@ -288,7 +245,7 @@
 
         <div class="content has-text-justified">
           <p>
-				Qualitative comparison of   DiffusionPoser to PIP [Yi et al.].
+				Qualitative comparison of  DiffusionPoser to PIP [Yi et al. 2022].
           </p>
         </div>
 
@@ -308,7 +265,9 @@
 		<div class="content has-text-justified">
           <p>
 				Our generative model allows reconstructing the same sequence with different sensor configurations.
-				Here we show results for selected configurations using four, three and two sensors.
+				Here we show results for selected configurations using four, three and two sensors. 
+				Note how uninstrumented limbs in the three and two IMU cases do not accurately align with the measured motion, but are still realistic.
+				In the three IMU case we can see that the motion of the legs (uninstrumented) is still reasonable.
           </p>
         </div>
 
@@ -329,7 +288,7 @@
 
         <div class="content has-text-justified">
           <p>
-				Qualitative comparison of   DiffusionPoser to PIP [Yi et al.].
+				We perform another comparison on another sequence from TotalCapture. 
           </p>
         </div>
 
@@ -348,9 +307,7 @@
 		
 		<div class="content has-text-justified">
           <p>
-				Our generative model allows reconstructing the same sequence with different sensor configurations.
-				Here we show results for selected configurations using four, three and two sensors. 
-				Note that we chose different configurations here.
+				Here we changed the configurations for two and three sensors.
           </p>
         </div>
 
@@ -368,37 +325,7 @@
 
       </div>
     </div>
-    <!--/ two char. -->
 
-    
-
-
-<!--    &lt;!&ndash; Concurrent Work. &ndash;&gt;-->
-<!--    <div class="columns is-centered">-->
-<!--      <div class="column is-full-width">-->
-<!--        <h2 class="title is-3">Related Links</h2>-->
-
-<!--        <div class="content has-text-justified">-->
-<!--          <p>-->
-<!--            There's a lot of excellent work that was introduced around the same time as ours.-->
-<!--          </p>-->
-<!--          <p>-->
-<!--            <a href="https://arxiv.org/abs/2104.09125">Progressive Encoding for Neural Optimization</a> introduces an idea similar to our windowed position encoding for coarse-to-fine optimization.-->
-<!--          </p>-->
-<!--          <p>-->
-<!--            <a href="https://www.albertpumarola.com/research/D-NeRF/index.html">D-NeRF</a> and <a href="https://gvv.mpi-inf.mpg.de/projects/nonrigid_nerf/">NR-NeRF</a>-->
-<!--            both use deformation fields to model non-rigid scenes.-->
-<!--          </p>-->
-<!--          <p>-->
-<!--            Some works model videos with a NeRF by directly modulating the density, such as <a href="https://video-nerf.github.io/">Video-NeRF</a>, <a href="https://www.cs.cornell.edu/~zl548/NSFF/">NSFF</a>, and <a href="https://neural-3d-video.github.io/">DyNeRF</a>-->
-<!--          </p>-->
-<!--          <p>-->
-<!--            There are probably many more by the time you are reading this. Check out <a href="https://dellaert.github.io/NeRF/">Frank Dellart's survey on recent NeRF papers</a>, and <a href="https://github.com/yenchenlin/awesome-NeRF">Yen-Chen Lin's curated list of NeRF papers</a>.-->
-<!--          </p>-->
-<!--        </div>-->
-<!--      </div>-->
-<!--    </div>-->
-<!--    &lt;!&ndash;/ Concurrent Work. &ndash;&gt;-->
 
   </div>
 </section>
@@ -420,7 +347,10 @@
 	    <div class="content has-text-justified">
           <p>
 			Our generative model can complete motion realistically if signals from sensors become unreliable or are lost. (f.e. lost connection or package losses).
-			As soon as signals are back a natural transition is performed to match the underlying motion. Regressive models such as PIP do not have this capacity.
+			Here we show reconstructions of motions where at a certain point in time we drop the signal form all sensors for a couple of seconds. 
+			Our generative model completes the motion.
+			As soon as signals are back a natural transition is performed to match the underlying motion. 
+			Regressive models such as PIP do not have this capacity to complete motion realistically.
           </p>
         </div>
 		<div class="content has-text-centered">
