@@ -6,7 +6,7 @@
         content="Diffusion models for...">
   <meta name="keywords" content="Diffusion, Motion Generation, Inertial Motion Capture">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>DiffusionPoser: An autoregressive diffusion model for real-time human motion reconstruction from arbitrary sparse sensor configurations</title>
+  <title>DiffusionPoser: Real-time Human Motion Reconstruction From Arbitrary Sparse Sensors Using Autoregressive Diffusion</title>
 
   <link href="https://fonts.googleapis.com/css?family=Google+Sans|Noto+Sans|Castoro"
         rel="stylesheet">
@@ -126,15 +126,16 @@
         <div class="content has-text-justified">
 
           <p>
+				Motion capture from a limited number of body-worn sensors, such as inertial measurement units (IMUs) and pressure insoles, has important applications in health, human performance, and entertainment. 
+				Recent work has focused on accurately reconstructing whole-body motion from a specific sensor configuration using six IMUs. 
+				While a common goal across applications is to use the minimal number of sensors to achieve required accuracy, the optimal arrangement of the sensors might differ from application to application.
+          </p>
+          <p>
+				We propose a single diffusion model, DiffusionPoser, which reconstructs human motion in real-time from arbitrary sensor configurations including IMUs and pressure insoles. 
+				Unlike existing methods, our model grants users the flexibility to determine the number and arrangement of sensors tailored to the specific activity of interest, without the need for retraining. 
+				A novel autoregressive inferencing scheme ensures real-time motion reconstruction that closely aligns with measured sensor signals. 
+				The generative nature of DiffusionPoser ensures realistic behavior, even for degrees-of-freedom not directly measured. 
 
-          </p>
-          <p>
-
-          </p>
-          <p>
-           
-          </p>
-          <p>
 
           </p>
 
@@ -274,7 +275,7 @@
     <!-- two char. -->
     <div class="columns is-centered">
       <div class="column is-full-width">
-        <h2 class="title is-3">Reconstructions using Diffusion Inertial Poser with different sensor configurations</h2>
+        <h2 class="title is-3">Reconstructions using   DiffusionPoser with different sensor configurations</h2>
 		
 		 <div class="content has-text-justified">
           <p>
@@ -287,7 +288,7 @@
 
         <div class="content has-text-justified">
           <p>
-				Qualitative comparison of Diffusion Inertial Poser to PIP [Yi et al.].
+				Qualitative comparison of   DiffusionPoser to PIP [Yi et al.].
           </p>
         </div>
 
@@ -328,7 +329,7 @@
 
         <div class="content has-text-justified">
           <p>
-				Qualitative comparison of Diffusion Inertial Poser to PIP [Yi et al.].
+				Qualitative comparison of   DiffusionPoser to PIP [Yi et al.].
           </p>
         </div>
 
